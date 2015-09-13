@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/BITS.Compilers.CSharp/obj
+/.vs/RoslynSimplified/v14
+/BITS.Compilers.CSharp.Test/NET45/bin/Debug
+/BITS.Compilers.CSharp.Test/NET45/obj/Debug
+/packages

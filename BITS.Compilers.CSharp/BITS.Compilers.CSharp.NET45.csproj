@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D64AD28-CBE3-4221-BCAD-AFC94DE478B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BITS.Compilers.CSharp</RootNamespace>
+    <AssemblyName>BITS.Compilers.CSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\output\BITS.Compilers.CSharp\NET45\Debug\</OutputPath>
+    <BaseIntermediateOutputPath>obj\NET45\Debug\</BaseIntermediateOutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\output\BITS.Compilers.CSharp\NET45\Release\</OutputPath>
+    <BaseIntermediateOutputPath>obj\NET45\Release\</BaseIntermediateOutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeAnalysis, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Common.1.0.0\lib\net45\Microsoft.CodeAnalysis.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.1.0.0\lib\net45\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp.Workspaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.Workspaces.1.0.0\lib\net45\Microsoft.CodeAnalysis.CSharp.Workspaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.VisualBasic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.VisualBasic.1.0.0\lib\net45\Microsoft.CodeAnalysis.VisualBasic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.VisualBasic.Workspaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.VisualBasic.Workspaces.1.0.0\lib\net45\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.Workspaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Workspaces.Common.1.0.0\lib\net45\Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.Workspaces.Desktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeAnalysis.Workspaces.Common.1.0.0\lib\net45\Microsoft.CodeAnalysis.Workspaces.Desktop.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.1.37.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.1.37\lib\dotnet\System.Collections.Immutable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Composition.AttributedModel, Version=1.0.30.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.30\lib\portable-net45+win8+wp8+wpa81\System.Composition.AttributedModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Composition.Convention, Version=1.0.30.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.30\lib\portable-net45+win8+wp8+wpa81\System.Composition.Convention.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Composition.Hosting, Version=1.0.30.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.30\lib\portable-net45+win8+wp8+wpa81\System.Composition.Hosting.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Composition.Runtime, Version=1.0.30.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.30\lib\portable-net45+win8+wp8+wpa81\System.Composition.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Composition.TypedParts, Version=1.0.30.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Composition.1.0.30\lib\portable-net45+win8+wp8+wpa81\System.Composition.TypedParts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Reflection.Metadata, Version=1.0.21.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.Metadata.1.0.21\lib\portable-net45+win8\System.Reflection.Metadata.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Syntax\ACCESSOR.cs" />
+    <Compile Include="Syntax\Attribute.cs" />
+    <Compile Include="Syntax\Attributes.cs" />
+    <Compile Include="Syntax\BaseField.cs" />
+    <Compile Include="Syntax\BaseMethod.cs" />
+    <Compile Include="Syntax\BaseProperty.cs" />
+    <Compile Include="Syntax\BaseType.cs" />
+    <Compile Include="Syntax\Block.cs" />
+    <Compile Include="Syntax\Class.cs" />
+    <Compile Include="Syntax\Extensions\Extension.Type.cs" />
+    <Compile Include="Syntax\SyntaxNode.cs" />
+    <Compile Include="Syntax\Constructor.cs" />
+    <Compile Include="Syntax\CONSTRUCTOR_CALL.cs" />
+    <Compile Include="Syntax\CONVERSION.cs" />
+    <Compile Include="Syntax\ConversionOperator.cs" />
+    <Compile Include="Syntax\Delegate.cs" />
+    <Compile Include="Syntax\Enum.cs" />
+    <Compile Include="Syntax\Event.cs" />
+    <Compile Include="Syntax\Extensions\Extension.AccessorDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.ArgumentSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.Attribute.cs" />
+    <Compile Include="Syntax\Extensions\Extension.AttributeArgumentSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.AttributeDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.AttributeListSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.AttributeSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.BaseTypeDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.BlockSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.ClassDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.Compilation.cs" />
+    <Compile Include="Syntax\Extensions\Extension.CompilationUnitSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.ConstructorDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.ConstructorDeclarationSyntax.NET45.cs" />
+    <Compile Include="Syntax\Extensions\Extension.ConstructorInitializerSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.Conversion.cs" />
+    <Compile Include="Syntax\Extensions\Extension.ConversionOperatorDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.ConversionOperatorDeclarationSyntax.NET45.cs" />
+    <Compile Include="Syntax\Extensions\Extension.DelegateDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.DelegateDeclarationSyntax.NET45.cs" />
+    <Compile Include="Syntax\Extensions\Extension.EnumDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.EnumDeclarationSyntax.NET45.cs" />
+    <Compile Include="Syntax\Extensions\Extension.EnumMemberDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.EnumMemberDeclarationSyntax.NET45.cs" />
+    <Compile Include="Syntax\Extensions\Extension.EqualsValueClauseSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.EventDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.EventDeclarationSyntax.NET45.cs" />
+    <Compile Include="Syntax\Extensions\Extension.ExternAliasDirectiveSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.FieldDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.FieldDeclarationSyntax.NET45.cs" />
+    <Compile Include="Syntax\Extensions\Extension.IndexerDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.IndexerDeclarationSyntax.NET45.cs" />
+    <Compile Include="Syntax\Extensions\Extension.InterfaceDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.InterfaceDeclarationSyntax.NET45.cs" />
+    <Compile Include="Syntax\Extensions\Extension.MethodDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.MethodDeclarationSyntax.NET45.cs" />
+    <Compile Include="Syntax\Extensions\Extension.MODIFIER.cs" />
+    <Compile Include="Syntax\Extensions\Extension.NamespaceDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.Operation.cs" />
+    <Compile Include="Syntax\Extensions\Extension.OperatorDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.OperatorDeclarationSyntax.NET45.cs" />
+    <Compile Include="Syntax\Extensions\Extension.ParameterSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.ParameterSyntax.NET45.cs" />
+    <Compile Include="Syntax\Extensions\Extension.PropertyDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.PropertyDeclarationSyntax.NET45.cs" />
+    <Compile Include="Syntax\Extensions\Extension.StatementSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.StructDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.StructDeclarationSyntax.NET45.cs" />
+    <Compile Include="Syntax\Extensions\Extension.SyntaxToken.cs" />
+    <Compile Include="Syntax\Extensions\Extension.SyntaxTokenList.cs" />
+    <Compile Include="Syntax\Extensions\Extension.SyntaxTree.cs" />
+    <Compile Include="Syntax\Extensions\Extension.TypeConstraintSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.TypeDeclarationSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.TypeParameterConstraintClauseSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.TypeParameterSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.UsingDirectiveSyntax.cs" />
+    <Compile Include="Syntax\Extensions\Extension.VARIANCE.cs" />
+    <Compile Include="Syntax\Extensions\Extension.SyntaxNode.cs" />
+    <Compile Include="Syntax\Field.cs" />
+    <Compile Include="Syntax\Indexer.cs" />
+    <Compile Include="Syntax\Interface.cs" />
+    <Compile Include="Syntax\Member.cs" />
+    <Compile Include="Syntax\Method.cs" />
+    <Compile Include="Syntax\MODIFIER.cs" />
+    <Compile Include="Syntax\Namespace.cs" />
+    <Compile Include="Syntax\OPERATION.cs" />
+    <Compile Include="Syntax\Operator.cs" />
+    <Compile Include="Syntax\Parameter.cs" />
+    <Compile Include="Syntax\PARAMETER_TYPE.cs" />
+    <Compile Include="Syntax\Property.cs" />
+    <Compile Include="Syntax\REFERENCE.cs" />
+    <Compile Include="Syntax\Struct.cs" />
+    <Compile Include="Syntax\SyntaxConfiguration.cs" />
+    <Compile Include="Syntax\CSharpSyntaxNode.cs" />
+    <Compile Include="Syntax\Type.cs" />
+    <Compile Include="Syntax\Using.cs" />
+    <Compile Include="Syntax\VARIANCE.cs" />
+    <Compile Include="Visitors\ISyntaxVisitor.cs" />
+    <Compile Include="Visitors\IVisitable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Visitors\Extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.BITS.Compilers.CSharp.NET45.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
+    <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
